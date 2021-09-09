@@ -1,0 +1,82 @@
+/*reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+html{
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem 'Montserrat', sans-serif; /* serif */
+}
+/* contexte css de balise html*/
+p,figure,h1,h2,h3,h4,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+/* Theme */
+:root{
+    --color-default: #000;
+    --color-primary: rgba(68, 68, 202);
+    --color-warning: rgb(170, 32, 32);
+    --color-success: rgb(9, 104, 9);
+}
+header h1{
+    line-height: 6rem;
+    text-align: center;
+    margin-bottom: 6rem;
+    background-color: var(--color-default);
+    color: #fafafa;
+    font-weight: 200;
+}
+header h1 img{
+    filter: invert(100%);
+}
+figure{
+    max-width: 80rem ;
+    margin: 0 auto 2rem  ;
+    border: .1rem #ccc solid;
+    padding: 1rem ;
+    background-color: #fafafafa;
+}
+figure img{
+    display: block;
+    max-width: 100%;
+}
+figure figcaption h2{
+    text-align: center;
+    line-height: 6.5rem;
+    font-weight: 400;
+}
+figure figcaption h2::before{
+    content: url(../asset/award.svg);
+}
+figure:last-child h2::before{
+    content: "\2764";
+    margin-right: .5rem;
+    color: var(--color-warning);
+}
+figcaption p{
+    line-height: 2.5rem;
+    text-align: justify;
+    font-weight: 300;
+}
+footer *{
+    text-align: center;
+    font-size: small;
+}
+@media scrren and (max-width: 60rem){
+    header h1{
+        margin-bottom: .1rem;
+        font-size: large; 
+    }
+    figcaption h2{
+        font-size: large;
+    }
+    figure{
+        margin-bottom: .1rem;
+        border-bottom: 0;
+    }
+    footer{
+        min-height: 50vh;
+    }
+
+}
